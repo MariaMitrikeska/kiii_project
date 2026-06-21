@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: notes-app
+  labels:
+    app: notes-app
+    environment: production

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: notes-app
+data:
+  # Конфигурација за конекција со база на податоци
+  DB_HOST: "postgres-service"
+  DB_PORT: "5432"
+  DB_NAME: "notesdb"
+  # Порт на backend апликацијата
+  PORT: "3000"
