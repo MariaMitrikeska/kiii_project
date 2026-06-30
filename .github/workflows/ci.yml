@@ -9,9 +9,7 @@ on:
       - main
 
 jobs:
-  # =====================
-  # JOB 1: Тестирање
-  # =====================
+
   test:
     name: Test Backend
     runs-on: ubuntu-latest
@@ -32,9 +30,7 @@ jobs:
         working-directory: ./backend
         run: node --check server.js
 
-  # =====================
-  # JOB 2: Build и Push на DockerHub
-  # =====================
+
   build-and-push:
     name: Build & Push Docker Images
     runs-on: ubuntu-latest
