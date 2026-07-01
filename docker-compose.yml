@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
 
-  # База на податоци - PostgreSQL
+  
   db:
     image: postgres:16-alpine
     container_name: notes-db
@@ -21,7 +21,7 @@ services:
       retries: 5
       start_period: 10s
 
-  # Backend - Node.js/Express REST API
+  
   backend:
     build: ./backend
     container_name: notes-backend
@@ -41,7 +41,7 @@ services:
         condition: service_healthy
     restart: on-failure
 
-  # Frontend - Nginx + HTML/JS
+  
   frontend:
     build: ./frontend
     container_name: notes-frontend
